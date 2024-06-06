@@ -1,0 +1,97 @@
+2024-04-26 21:46:09.495 +03:00 [INF] Executed DbCommand (210ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-04-26 21:46:10.666 +03:00 [INF] Executed DbCommand (1,066ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2024-04-26 21:46:10.738 +03:00 [INF] User profile is available. Using 'C:\Users\Jmih_Pojiloy\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-26 21:46:12.242 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/index.html - -
+2024-04-26 21:46:12.724 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-26 21:46:12.725 +03:00 [INF] Hosting environment: Development
+2024-04-26 21:46:12.725 +03:00 [INF] Content root path: D:\repo\final_CRM\CRM_Backend\CRM_webAPI\Presentation\Notes.WebApi
+2024-04-26 21:46:14.715 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/index.html - - - 200 - text/html;charset=utf-8 2456.3886ms
+2024-04-26 21:46:22.505 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - -
+2024-04-26 21:46:22.523 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 9.7491ms
+2024-04-26 21:46:23.325 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_vs/browserLink - -
+2024-04-26 21:46:23.542 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 217.8537ms
+2024-04-26 21:46:26.512 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - -
+2024-04-26 21:46:26.809 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 294.6430ms
+2024-04-26 22:13:20.351 +03:00 [INF] Executed DbCommand (280ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-04-26 22:13:20.767 +03:00 [INF] Executed DbCommand (222ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2024-04-26 22:13:20.949 +03:00 [INF] User profile is available. Using 'C:\Users\Jmih_Pojiloy\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-26 22:13:21.422 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/index.html - -
+2024-04-26 22:13:21.632 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-26 22:13:21.633 +03:00 [INF] Hosting environment: Development
+2024-04-26 22:13:21.633 +03:00 [INF] Content root path: D:\repo\final_CRM\CRM_Backend\CRM_webAPI\Presentation\Notes.WebApi
+2024-04-26 22:13:22.428 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/index.html - - - 200 - text/html;charset=utf-8 1012.4201ms
+2024-04-26 22:13:24.444 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - -
+2024-04-26 22:13:24.459 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 12.7192ms
+2024-04-26 22:13:27.556 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_vs/browserLink - -
+2024-04-26 22:13:27.683 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 126.3355ms
+2024-04-26 22:13:30.525 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - -
+2024-04-26 22:13:30.797 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 271.2004ms
+2024-04-26 23:02:34.184 +03:00 [INF] Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-04-26 23:02:34.472 +03:00 [INF] Executed DbCommand (130ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2024-04-26 23:02:34.512 +03:00 [INF] User profile is available. Using 'C:\Users\Jmih_Pojiloy\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-26 23:02:34.750 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/index.html - -
+2024-04-26 23:02:34.885 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-26 23:02:34.886 +03:00 [INF] Hosting environment: Development
+2024-04-26 23:02:34.886 +03:00 [INF] Content root path: D:\repo\final_CRM\CRM_Backend\CRM_webAPI\Presentation\Notes.WebApi
+2024-04-26 23:02:35.365 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/index.html - - - 200 - text/html;charset=utf-8 617.6386ms
+2024-04-26 23:02:35.383 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - -
+2024-04-26 23:02:35.393 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 9.6092ms
+2024-04-26 23:02:35.567 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_vs/browserLink - -
+2024-04-26 23:02:35.934 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 366.1975ms
+2024-04-26 23:02:36.244 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - -
+2024-04-26 23:02:36.585 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 340.2975ms
+2024-04-26 23:02:54.415 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - -
+2024-04-26 23:02:54.437 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 18.9505ms
+2024-04-26 23:02:54.913 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/favicon.ico - -
+2024-04-26 23:02:56.340 +03:00 [INF] HTTP GET /favicon.ico responded 404 in 0.9271 ms
+2024-04-26 23:02:56.345 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/favicon.ico - - - 404 - - 1431.8462ms
+2024-04-26 23:03:44.301 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:44376/swagger/v1/swagger.json - -
+2024-04-26 23:03:44.319 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:44376/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 18.2776ms

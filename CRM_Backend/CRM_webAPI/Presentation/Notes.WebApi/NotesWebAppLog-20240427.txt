@@ -1,0 +1,128 @@
+2024-04-27 23:42:12.602 +03:00 [INF] Executed DbCommand (87ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-04-27 23:42:13.104 +03:00 [INF] Executed DbCommand (264ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2024-04-27 23:42:13.210 +03:00 [INF] User profile is available. Using 'C:\Users\Jmih_Pojiloy\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-27 23:42:13.669 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/index.html - -
+2024-04-27 23:42:13.966 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-27 23:42:13.966 +03:00 [INF] Hosting environment: Development
+2024-04-27 23:42:13.966 +03:00 [INF] Content root path: D:\repo\final_CRM\CRM_Backend\CRM_webAPI\Presentation\Notes.WebApi
+2024-04-27 23:42:15.972 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/index.html - - - 200 - text/html;charset=utf-8 2301.8377ms
+2024-04-27 23:42:16.054 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - -
+2024-04-27 23:42:16.077 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 22.9161ms
+2024-04-27 23:42:17.163 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_vs/browserLink - -
+2024-04-27 23:42:17.461 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 297.7055ms
+2024-04-27 23:42:22.881 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - -
+2024-04-27 23:42:23.176 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 294.2680ms
+2024-04-27 23:43:18.934 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - -
+2024-04-27 23:43:19.002 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - -
+2024-04-27 23:43:19.067 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:43:19.069 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:43:19.071 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - - - 204 - - 137.7181ms
+2024-04-27 23:43:19.073 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - - - 204 - - 72.7967ms
+2024-04-27 23:43:19.078 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376//api/v1/Note - -
+2024-04-27 23:43:19.093 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:43:21.663 +03:00 [INF] HTTP GET //api/v1/Note responded 404 in 1.0354 ms
+2024-04-27 23:43:21.667 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376//api/v1/Note - - - 404 - - 2588.8909ms
+2024-04-27 23:43:21.670 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376//api/v1/Note - -
+2024-04-27 23:43:21.670 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:43:21.674 +03:00 [INF] HTTP GET //api/v1/Note responded 404 in 0.0119 ms
+2024-04-27 23:43:21.676 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376//api/v1/Note - - - 404 - - 5.7574ms
+2024-04-27 23:43:53.982 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - -
+2024-04-27 23:43:53.983 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:43:53.984 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - - - 204 - - 5.2438ms
+2024-04-27 23:43:54.002 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - -
+2024-04-27 23:43:54.002 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376//api/v1/Note - -
+2024-04-27 23:43:54.005 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:43:54.009 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:43:54.009 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - - - 204 - - 7.4766ms
+2024-04-27 23:43:54.016 +03:00 [INF] HTTP GET //api/v1/Note responded 404 in 0.1006 ms
+2024-04-27 23:43:54.020 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376//api/v1/Note - - - 404 - - 18.0933ms
+2024-04-27 23:43:54.032 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376//api/v1/Note - -
+2024-04-27 23:43:54.033 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:43:54.033 +03:00 [INF] HTTP GET //api/v1/Note responded 404 in 0.0112 ms
+2024-04-27 23:43:54.036 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376//api/v1/Note - - - 404 - - 3.5665ms
+2024-04-27 23:46:33.959 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - -
+2024-04-27 23:46:33.982 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:46:33.985 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - - - 204 - - 24.7412ms
+2024-04-27 23:46:33.985 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - -
+2024-04-27 23:46:33.985 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:46:33.985 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - - - 204 - - 0.5193ms
+2024-04-27 23:46:33.992 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376//api/v1/Note - -
+2024-04-27 23:46:33.992 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:46:33.993 +03:00 [INF] HTTP GET //api/v1/Note responded 404 in 0.0114 ms
+2024-04-27 23:46:33.994 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376//api/v1/Note - - - 404 - - 3.4094ms
+2024-04-27 23:46:34.001 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376//api/v1/Note - -
+2024-04-27 23:46:34.001 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:46:34.002 +03:00 [INF] HTTP GET //api/v1/Note responded 404 in 0.2240 ms
+2024-04-27 23:46:34.011 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376//api/v1/Note - - - 404 - - 10.3582ms
+2024-04-27 23:50:25.008 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - -
+2024-04-27 23:50:25.010 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:50:25.010 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - -
+2024-04-27 23:50:25.010 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:50:25.010 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - - - 204 - - 2.1254ms
+2024-04-27 23:50:25.010 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - - - 204 - - 0.4209ms
+2024-04-27 23:50:25.017 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376//api/v1/Note - -
+2024-04-27 23:50:25.017 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:50:25.020 +03:00 [INF] HTTP GET //api/v1/Note responded 404 in 0.0198 ms
+2024-04-27 23:50:25.020 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376//api/v1/Note - - - 404 - - 3.1956ms
+2024-04-27 23:50:25.025 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376//api/v1/Note - -
+2024-04-27 23:50:25.025 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:50:25.026 +03:00 [INF] HTTP GET //api/v1/Note responded 404 in 0.0989 ms
+2024-04-27 23:50:25.033 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376//api/v1/Note - - - 404 - - 7.8904ms
+2024-04-27 23:51:21.141 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - -
+2024-04-27 23:51:21.141 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:51:21.147 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - - - 204 - - 6.1217ms
+2024-04-27 23:51:21.147 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - -
+2024-04-27 23:51:21.147 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376//api/v1/Note - -
+2024-04-27 23:51:21.147 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:51:21.147 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:51:21.148 +03:00 [INF] HTTP GET //api/v1/Note responded 404 in 0.0072 ms
+2024-04-27 23:51:21.148 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - - - 204 - - 0.5191ms
+2024-04-27 23:51:21.172 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376//api/v1/Note - - - 404 - - 24.2505ms
+2024-04-27 23:51:21.172 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376//api/v1/Note - -
+2024-04-27 23:51:21.172 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:51:21.172 +03:00 [INF] HTTP GET //api/v1/Note responded 404 in 0.0079 ms
+2024-04-27 23:51:21.185 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376//api/v1/Note - - - 404 - - 13.3886ms
+2024-04-27 23:51:29.641 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - -
+2024-04-27 23:51:29.641 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - -
+2024-04-27 23:51:29.641 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:51:29.642 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:51:29.642 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - - - 204 - - 0.6016ms
+2024-04-27 23:51:29.642 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - - - 204 - - 0.6703ms
+2024-04-27 23:51:29.647 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376//api/v1/Note - -
+2024-04-27 23:51:29.648 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:51:29.648 +03:00 [INF] HTTP GET //api/v1/Note responded 404 in 0.0082 ms
+2024-04-27 23:51:29.648 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376//api/v1/Note - - - 404 - - 1.6517ms
+2024-04-27 23:51:29.651 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376//api/v1/Note - -
+2024-04-27 23:51:29.651 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:51:29.652 +03:00 [INF] HTTP GET //api/v1/Note responded 404 in 0.0114 ms
+2024-04-27 23:51:29.668 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376//api/v1/Note - - - 404 - - 16.4809ms
+2024-04-27 23:54:21.275 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - -
+2024-04-27 23:54:21.275 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:54:21.276 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - - - 204 - - 1.6434ms
+2024-04-27 23:54:21.276 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - -
+2024-04-27 23:54:21.276 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:54:21.277 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44376//api/v1/Note - - - 204 - - 0.5826ms
+2024-04-27 23:54:21.282 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376//api/v1/Note - -
+2024-04-27 23:54:21.283 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:54:21.285 +03:00 [INF] HTTP GET //api/v1/Note responded 404 in 0.0086 ms
+2024-04-27 23:54:21.285 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376//api/v1/Note - - - 404 - - 2.8929ms
+2024-04-27 23:54:21.290 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376//api/v1/Note - -
+2024-04-27 23:54:21.290 +03:00 [INF] CORS policy execution successful.
+2024-04-27 23:54:21.290 +03:00 [INF] HTTP GET //api/v1/Note responded 404 in 0.0073 ms
+2024-04-27 23:54:21.301 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376//api/v1/Note - - - 404 - - 11.2495ms

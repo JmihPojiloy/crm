@@ -1,0 +1,70 @@
+2024-04-14 21:25:22.093 +03:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-04-14 21:25:22.387 +03:00 [INF] Executed DbCommand (179ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2024-04-14 21:25:22.493 +03:00 [INF] User profile is available. Using 'C:\Users\Jmih_Pojiloy\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-14 21:25:23.654 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/ - -
+2024-04-14 21:25:23.959 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-14 21:25:23.959 +03:00 [INF] Hosting environment: Development
+2024-04-14 21:25:23.959 +03:00 [INF] Content root path: D:\repo\final_CRM\CRM_Backend\CRM_webAPI\Presentation\Notes.WebApi
+2024-04-14 21:25:25.004 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/index.html - -
+2024-04-14 21:25:25.028 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/ - - - 301 - - 1363.3552ms
+2024-04-14 21:25:25.206 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/index.html - - - 200 - text/html;charset=utf-8 201.2238ms
+2024-04-14 21:25:25.443 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger-ui.css - -
+2024-04-14 21:25:25.444 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger-ui-bundle.js - -
+2024-04-14 21:25:25.444 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger-ui-standalone-preset.js - -
+2024-04-14 21:25:25.506 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-04-14 21:25:25.524 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-04-14 21:25:25.556 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger-ui.css - - - 200 144929 text/css 112.3212ms
+2024-04-14 21:25:25.558 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 113.5595ms
+2024-04-14 21:25:25.571 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-04-14 21:25:25.609 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger-ui-bundle.js - - - 200 1061536 text/javascript 165.6270ms
+2024-04-14 21:25:26.340 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - -
+2024-04-14 21:25:26.344 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 3.6507ms
+2024-04-14 21:25:26.694 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_vs/browserLink - -
+2024-04-14 21:25:26.928 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 233.8181ms
+2024-04-14 21:25:28.529 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/favicon-32x32.png - -
+2024-04-14 21:25:28.530 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-04-14 21:25:28.530 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/favicon-32x32.png - - - 200 628 image/png 1.1615ms
+2024-04-14 21:25:28.717 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - -
+2024-04-14 21:25:28.928 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 211.4399ms
+2024-04-14 21:27:31.832 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:44376/api/v1/Note application/json 142
+2024-04-14 21:27:33.659 +03:00 [INF] CORS policy execution successful.
+2024-04-14 21:27:34.776 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)
+2024-04-14 21:27:34.786 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-04-14 21:27:34.797 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:44376/api/v1/Note application/json 142 - 401 - - 2965.0012ms
+2024-04-14 21:28:14.083 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44376/api/v1/Note application/json 72
+2024-04-14 21:28:14.090 +03:00 [INF] CORS policy execution successful.
+2024-04-14 21:28:14.108 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2024-04-14 21:28:14.166 +03:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2024-04-14 21:28:14.850 +03:00 [INF] Notes Request: CreateNoteCommand admin {"Name":"string","Description":"string","Contact":"string","$type":"CreateNoteCommand"}
+2024-04-14 21:28:15.555 +03:00 [INF] Executed DbCommand (188ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 250), @p4='?' (Size = 4000), @p5='?' (Size = 20)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Notes] ([Id], [Contact], [CreationDate], [Description], [Name], [Status])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2024-04-14 21:28:15.599 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'System.Guid'.
+2024-04-14 21:28:15.645 +03:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 1473.8096ms
+2024-04-14 21:28:15.646 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2024-04-14 21:28:15.648 +03:00 [INF] HTTP POST /api/v1/Note responded 201 in 1542.1828 ms
+2024-04-14 21:28:15.656 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44376/api/v1/Note application/json 72 - 201 - application/json;+charset=utf-8 1574.1342ms
+2024-04-14 21:29:15.806 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/api/v1/Note - -
+2024-04-14 21:29:15.916 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)
+2024-04-14 21:29:15.918 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-04-14 21:29:15.930 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/api/v1/Note - - - 401 - - 124.5628ms

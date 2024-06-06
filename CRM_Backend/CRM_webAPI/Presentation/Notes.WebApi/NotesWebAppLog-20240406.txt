@@ -1,0 +1,144 @@
+2024-04-06 23:28:18.604 +03:00 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-04-06 23:28:18.822 +03:00 [INF] Executed DbCommand (100ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2024-04-06 23:28:18.892 +03:00 [INF] User profile is available. Using 'C:\Users\Jmih_Pojiloy\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-06 23:28:19.317 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/ - -
+2024-04-06 23:28:19.440 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-06 23:28:19.440 +03:00 [INF] Hosting environment: Development
+2024-04-06 23:28:19.440 +03:00 [INF] Content root path: D:\repo\final_CRM\CRM_Backend\CRM_webAPI\Presentation\Notes.WebApi
+2024-04-06 23:28:20.184 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/ - - - 301 - - 870.9428ms
+2024-04-06 23:28:20.293 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/index.html - -
+2024-04-06 23:28:20.561 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/index.html - - - 200 - text/html;charset=utf-8 264.8583ms
+2024-04-06 23:28:20.599 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger-ui-standalone-preset.js - -
+2024-04-06 23:28:20.619 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger-ui-bundle.js - -
+2024-04-06 23:28:20.619 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - -
+2024-04-06 23:28:20.636 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 15.1113ms
+2024-04-06 23:28:20.636 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger-ui.css - -
+2024-04-06 23:28:20.677 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-04-06 23:28:20.741 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-04-06 23:28:21.275 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 675.6363ms
+2024-04-06 23:28:21.295 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-04-06 23:28:21.329 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_vs/browserLink - -
+2024-04-06 23:28:21.383 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger-ui.css - - - 200 144929 text/css 747.0141ms
+2024-04-06 23:28:21.505 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger-ui-bundle.js - - - 200 1061536 text/javascript 885.0071ms
+2024-04-06 23:28:21.521 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 191.8036ms
+2024-04-06 23:28:21.825 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/favicon-32x32.png - -
+2024-04-06 23:28:21.827 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-04-06 23:28:21.827 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/favicon-32x32.png - - - 200 628 image/png 1.8758ms
+2024-04-06 23:28:21.946 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - -
+2024-04-06 23:28:22.353 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 407.0159ms
+2024-04-06 23:28:35.546 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/api/v1/Note - -
+2024-04-06 23:28:37.198 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)
+2024-04-06 23:28:37.205 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-04-06 23:28:37.206 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/api/v1/Note - - - 401 - - 1659.8663ms
+2024-04-06 23:29:33.958 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/api/v1/Note - -
+2024-04-06 23:29:33.980 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)
+2024-04-06 23:29:33.981 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-04-06 23:29:33.982 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/api/v1/Note - - - 401 - - 23.7193ms
+2024-04-06 23:31:43.804 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/api/v1/Note - -
+2024-04-06 23:31:43.811 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)
+2024-04-06 23:31:43.812 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-04-06 23:31:43.812 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/api/v1/Note - - - 401 - - 8.6777ms
+2024-04-06 23:31:52.081 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/api/v1/Note - -
+2024-04-06 23:31:52.082 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)
+2024-04-06 23:31:52.082 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-04-06 23:31:52.082 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/api/v1/Note - - - 401 - - 1.3797ms
+2024-04-06 23:33:48.767 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/api/v1/Note - -
+2024-04-06 23:33:48.768 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)
+2024-04-06 23:33:48.768 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-04-06 23:33:48.769 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/api/v1/Note - - - 401 - - 2.6154ms
+2024-04-06 23:34:38.674 +03:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-04-06 23:34:38.843 +03:00 [INF] Executed DbCommand (82ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2024-04-06 23:34:38.885 +03:00 [INF] User profile is available. Using 'C:\Users\Jmih_Pojiloy\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-06 23:34:39.084 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/index.html - -
+2024-04-06 23:34:39.268 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-06 23:34:39.268 +03:00 [INF] Hosting environment: Development
+2024-04-06 23:34:39.268 +03:00 [INF] Content root path: D:\repo\final_CRM\CRM_Backend\CRM_webAPI\Presentation\Notes.WebApi
+2024-04-06 23:34:39.614 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/index.html - - - 200 - text/html;charset=utf-8 533.5666ms
+2024-04-06 23:34:39.665 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - -
+2024-04-06 23:34:39.675 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 8.2420ms
+2024-04-06 23:34:39.850 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_vs/browserLink - -
+2024-04-06 23:34:40.142 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 290.5796ms
+2024-04-06 23:34:40.923 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - -
+2024-04-06 23:34:41.206 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 282.5014ms
+2024-04-06 23:35:08.305 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/api/v1/Note - -
+2024-04-06 23:35:09.024 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)
+2024-04-06 23:35:09.046 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-04-06 23:35:09.049 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/api/v1/Note - - - 401 - - 744.1005ms
+2024-04-06 23:36:02.414 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/api/v1/Note/20aa235d-845e-4f01-a508-d555dd010d31 - -
+2024-04-06 23:36:02.424 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)
+2024-04-06 23:36:02.424 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-04-06 23:36:02.426 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/api/v1/Note/20aa235d-845e-4f01-a508-d555dd010d31 - - - 401 - - 11.8499ms
+2024-04-06 23:36:04.793 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/api/v1/Note/20aa235d-845e-4f01-a508-d555dd010d31 - -
+2024-04-06 23:36:04.799 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)
+2024-04-06 23:36:04.799 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-04-06 23:36:04.800 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/api/v1/Note/20aa235d-845e-4f01-a508-d555dd010d31 - - - 401 - - 7.7130ms
+2024-04-06 23:59:41.651 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-04-06 23:59:41.845 +03:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2024-04-06 23:59:41.897 +03:00 [INF] User profile is available. Using 'C:\Users\Jmih_Pojiloy\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-06 23:59:42.160 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/index.html - -
+2024-04-06 23:59:42.324 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-06 23:59:42.324 +03:00 [INF] Hosting environment: Development
+2024-04-06 23:59:42.324 +03:00 [INF] Content root path: D:\repo\final_CRM\CRM_Backend\CRM_webAPI\Presentation\Notes.WebApi
+2024-04-06 23:59:42.766 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/index.html - - - 200 - text/html;charset=utf-8 610.2968ms
+2024-04-06 23:59:42.892 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - -
+2024-04-06 23:59:42.903 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 8.1316ms
+2024-04-06 23:59:43.613 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_vs/browserLink - -
+2024-04-06 23:59:43.714 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 100.0790ms
+2024-04-06 23:59:44.502 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - -
+2024-04-06 23:59:44.712 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 209.5425ms

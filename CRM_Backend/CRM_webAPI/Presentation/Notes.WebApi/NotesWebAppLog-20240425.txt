@@ -1,0 +1,30 @@
+2024-04-25 19:08:46.402 +03:00 [INF] Executed DbCommand (96ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-04-25 19:08:48.619 +03:00 [INF] Executed DbCommand (2,081ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2024-04-25 19:08:48.899 +03:00 [INF] User profile is available. Using 'C:\Users\Jmih_Pojiloy\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 19:08:49.659 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/index.html - -
+2024-04-25 19:08:49.879 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 19:08:49.879 +03:00 [INF] Hosting environment: Development
+2024-04-25 19:08:49.879 +03:00 [INF] Content root path: D:\repo\final_CRM\CRM_Backend\CRM_webAPI\Presentation\Notes.WebApi
+2024-04-25 19:08:51.185 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/index.html - - - 200 - text/html;charset=utf-8 1531.9875ms
+2024-04-25 19:08:51.250 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - -
+2024-04-25 19:08:51.264 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_framework/aspnetcore-browser-refresh.js - - - 200 13760 application/javascript;+charset=utf-8 13.6238ms
+2024-04-25 19:08:52.099 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/_vs/browserLink - -
+2024-04-25 19:08:52.232 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 133.5690ms
+2024-04-25 19:08:55.446 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - -
+2024-04-25 19:08:55.767 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44376/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 320.8406ms
